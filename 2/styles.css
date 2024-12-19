@@ -2,16 +2,11 @@
   margin: 0;
 }
 :root {
-  --background-color: #080928;
-  --accent-color: #0779e4;
-  --border-color: #333;
-  --hover-color: #0cfdfe;
-  --text-color: #fff;
 }
 body {
   font-family: "Times New Roman", Times, serif;
   line-height: 1.6;
-  color: #333;
+  color: #000;
 }
 
 header {
@@ -19,7 +14,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
   h1 {
     margin: 10px;
     color: #ffd700;
@@ -36,7 +30,7 @@ nav ul {
   a {
     text-decoration: none;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #000;
   }
   a:hover {
