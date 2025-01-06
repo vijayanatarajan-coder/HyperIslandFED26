@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+  display: block;
+}
+
+label {
+  font-weight: bold;
+}
+.input-group.error {
+  margin: 5px;
+  color: red;
+  font-size: 16px;
+}
+.input-group.success input {
+  border-color: green;
+}
+
+.input-group.error input {
+  border-color: red;
+}
+#welcomeMessage {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: green;
+  text-align: center;
+}
