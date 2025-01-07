@@ -28,4 +28,12 @@ JavaScript Event Handlers - add click events to all buttons in the JavaScript fi
 
 Prevent event propagation.
 
+### Assignment 5
+
+Fetch API and Promises.
+
+- Find the error in the GET request
+- Finish the GET request
+- Implement the POST request using FetchAPI and Promises
+
 ## React Assignments
