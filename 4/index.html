@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handlers</title>
+    <style>
+      #buttonContainer {
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      #buttonContainer button {
+        margin: 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #buttonContainer button:hover {
+        background-color: #0056b3;
+      }
+
+      #buttonChildContainer {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="buttonContainer">
+      <button id="button1">Button 1</button>
+      <button id="button2">Button 2</button>
+      <button id="button3">Button 3</button>
+      <div id="buttonChildContainer">
+        <button id="button4">Button 4</button>
+        <button id="button5">Button 5</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

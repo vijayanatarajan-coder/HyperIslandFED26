@@ -16,4 +16,16 @@ Style a HTML page, to make it look nice.
 
 JavaScript DOM Manipulation - complete script.js, style the form using only JavaScript.
 
+### Assignment 4
+
+JavaScript Event Handlers - add click events to all buttons in the JavaScript file. Use different techniques:
+
+- Inline Event Handlers on Button 1
+- DOM Level 0 Event Handlers on Button 2
+- DOM Level 2 Event Listeners on Button 3
+- Event Delegation on Button 4 and 5
+- DO NOT delete parent event listener
+
+Prevent event propagation.
+
 ## React Assignments
