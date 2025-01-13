@@ -13,21 +13,20 @@ form {
 label {
   font-weight: bold;
 }
-.input-group .error {
+/* .input-group .error {
   margin: 5px;
   color: red;
   font-size: 16px;
+} */
+.success label {
+  color: green;
 }
-.success input {
-  border-color: green;
-}
-
-.error input {
-  border-color: red;
+.error label {
+  color: red;
 }
 #welcomeMessage {
   margin-top: 20px;
   font-size: 1.5em;
-  color: green;
+  color: rgb(255, 20, 220);
   text-align: center;
 }
