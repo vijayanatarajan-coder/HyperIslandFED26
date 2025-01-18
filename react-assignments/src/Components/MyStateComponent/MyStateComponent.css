@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #fff; /* Optional for styling */
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+  font-weight: 400;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+.form-container label {
+  padding: 0.5rem;
+}
+.form-container input {
+  margin-left: 0.5rem;
+}
+.form-container button {
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  font-size: medium;
+  font-weight: 400;
+}
