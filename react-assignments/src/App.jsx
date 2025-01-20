@@ -1,5 +1,4 @@
 import "./App.css";
-//import Person from "./Components/Person";
 import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
 
 function App() {
@@ -16,8 +15,8 @@ function App() {
   return (
     <div>
       {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
-      {/*<Person props={person} />*/}
       <MyStateComponent />
+      {/* <PropsComponent person={person} /> */}
     </div>
   );
 }
