@@ -1,5 +1,6 @@
 import "./App.css";
 import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
+//import Person from "./Components/Person";
 
 function App() {
   /*const person = {
