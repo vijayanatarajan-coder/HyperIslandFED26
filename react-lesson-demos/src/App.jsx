@@ -2,7 +2,11 @@ import EventComponent from "./Components/Events/EventComponent";
 import MyFirstComponent from "./Components/Props/MyFirstComponent";
 import MyWrapperComponent from "./Components/Props/MyWrapperComponent";
 import MyStateComponent from "./Components/State/MyStateComponent";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import FetchComponent from "./Components/useEffect/FetchComponent";
+import EffectsComponent from "./Components/useEffect/EffectsComponent";
+import RefComponent from "./Components/useEffect/RefComponent";
+import FetchExampleComponent from "./Components/useEffect/FetchExampleComponent";
 
 function App() {
   const userName = "John";
@@ -79,7 +83,7 @@ function App() {
 
   return (
     <div>
-      {isLoggedIn ? <h1>Welcome</h1> : <h1>Login</h1>}
+      {/* {isLoggedIn ? <h1>Welcome</h1> : <h1>Login</h1>}
       {showContent && (
         <MyWrapperComponent
           Component={MyFirstComponent}
@@ -90,13 +94,18 @@ function App() {
       {allUsers.map((user) => (
         <p key={user.name}>{user.name}</p>
       ))}
-      <h1>{count}</h1>
-      <MyStateComponent
+      <h1>{count}</h1> */}
+      {/* <MyStateComponent
         user={user}
         count={count}
         clickEventHandler={clickEventHandler}
-      />
-      <EventComponent />
+      /> */}
+      {/* <EventComponent /> */}
+      {/* <FetchComponent /> */}
+      {/* <EffectsComponent /> */}
+      {/* <RefComponent /> */}
+      {/* <FetchExampleComponent /> */}
+      <FetchExampleComponent />
     </div>
   );
 }
