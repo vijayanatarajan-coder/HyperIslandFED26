@@ -83,29 +83,7 @@ function App() {
 
   return (
     <div>
-      {/* {isLoggedIn ? <h1>Welcome</h1> : <h1>Login</h1>}
-      {showContent && (
-        <MyWrapperComponent
-          Component={MyFirstComponent}
-          ComponentProps={user}
-        />
-      )}
-      <h4>Available users:</h4>
-      {allUsers.map((user) => (
-        <p key={user.name}>{user.name}</p>
-      ))}
-      <h1>{count}</h1> */}
-      {/* <MyStateComponent
-        user={user}
-        count={count}
-        clickEventHandler={clickEventHandler}
-      /> */}
       <EventComponent />
-      <FetchComponent />
-      <EffectsComponent />
-      <RefComponent />
-      <FetchExampleComponent />
-      <FetchExampleComponent />
     </div>
   );
 }
