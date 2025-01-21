@@ -100,11 +100,11 @@ function App() {
         count={count}
         clickEventHandler={clickEventHandler}
       /> */}
-      {/* <EventComponent /> */}
-      {/* <FetchComponent /> */}
-      {/* <EffectsComponent /> */}
-      {/* <RefComponent /> */}
-      {/* <FetchExampleComponent /> */}
+      <EventComponent />
+      <FetchComponent />
+      <EffectsComponent />
+      <RefComponent />
+      <FetchExampleComponent />
       <FetchExampleComponent />
     </div>
   );
