@@ -15,7 +15,10 @@ const MyStateComponent = (props) => {
   }
 
   function updateUser() {
-    setUser({ ...user, age: user.age + 1 });
+    setUser({ ...user, age: user.age + 10 });
+    console.log("User:", user);
+    console.log("Age:", props.user.age);
+    return (user.age + 12) % 2 === 0;
   }
 
   function addItem() {
