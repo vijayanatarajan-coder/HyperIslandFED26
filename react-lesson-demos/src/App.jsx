@@ -7,6 +7,12 @@ import FetchComponent from "./Components/useEffect/FetchComponent";
 import EffectsComponent from "./Components/useEffect/EffectsComponent";
 import RefComponent from "./Components/useEffect/RefComponent";
 import FetchExampleComponent from "./Components/useEffect/FetchExampleComponent";
+import Homepage from "./Components/Homepage/Homepage";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import Nav from "./Components/Nav/Nav";
+import MySecondComponent from "./Components/Props/MySecondComponent";
+import ErrorPage from "./Components/404/ErrorPage";
+import CharacterComponent from "./Components/useEffect/CharacterComponent";
 
 function App() {
   const userName = "John";
@@ -82,9 +88,32 @@ function App() {
   }
 
   return (
-    <div>
-      <EventComponent />
-    </div>
+    <>
+      <Nav />
+      <Routes>
+        <Route index element={<Homepage />} />
+        <Route path="/fetch" element={<FetchComponent />} />
+        <Route path="character">
+          <Route index element={<FetchExampleComponent />} />
+          <Route path=":name" element={<CharacterComponent />} />
+        </Route>
+
+        <Route path="/effects" element={<EffectsComponent />} />
+        <Route path="/ref" element={<RefComponent />} />
+        <Route path="/events" element={<EventComponent />} />
+        <Route path="/state" element={<MyStateComponent user={user} />} />
+        <Route
+          path="/wrapper"
+          element={
+            <MyWrapperComponent
+              Component={MyFirstComponent}
+              ComponentProps={user}
+            />
+          }
+        />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 
-function MySecondComponent(user) {
+function MySecondComponent({ name, age, city, hobbies }) {
   return (
     <div>
-      <h1>Name: {user.name}</h1>
-      <p>Age: {user.age}</p>
-      <p>City: {user.city}</p>
-      <p>Hobbies: {user.hobbies.join(", ")}</p>
+      <h1>Name: {name}</h1>
+      <p>Age: {age}</p>
+      <p>City: {city}</p>
+      <p>Hobbies: {hobbies.join(", ")}</p>
     </div>
   );
 }

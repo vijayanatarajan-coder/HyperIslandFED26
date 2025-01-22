@@ -1,27 +1,12 @@
 import React, { useEffect, useState } from "react";
-import CharacterComponent from "./CharacterComponent";
+import { Link, useNavigate } from "react-router";
 
 function FetchExampleComponent() {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [chosenCharacter, setChosenCharacter] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // const fetchAllPages = async (url) => {
-    //   try {
-    //     const response = await fetch(url);
-    //     const data = await response.json();
-    //     setCharacters((prevCharacters) => [...prevCharacters, ...data.results]);
-    //     console.log(data.results);
-    //     if (data.next) {
-    //       fetchAllPages(data.next);
-    //     }
-    //   } catch (error) {
-    //     console.error("Error fetching data:", error);
-    //   }
-    // };
-    // fetchAllPages("https://swapi.dev/api/people/");
-
     fetch("https://swapi.dev/api/people")
       .then((response) => response.json())
       .then((data) => {
@@ -36,32 +21,25 @@ function FetchExampleComponent() {
     return <h2>Loading...</h2>;
   }
 
-  function resetChosenCharacter() {
-    setChosenCharacter(null);
+  function handleCharacterClick(character) {
+    navigate(`/character/${character.name}`, { state: { character } });
   }
 
   return (
     <div>
-      {!chosenCharacter ? (
-        <>
-          <h1>Star Wars Characters</h1>
-          <ul>
-            {characters.map((character) => (
-              <li
-                onClick={() => setChosenCharacter(character)}
-                key={character.name}
-              >
-                {character.name}
-              </li>
-            ))}
-          </ul>
-        </>
-      ) : (
-        <CharacterComponent
-          resetChosenCharacter={resetChosenCharacter}
-          character={chosenCharacter}
-        />
-      )}
+      <h1>Star Wars Characters</h1>
+      <ul>
+        {characters.map((character) => (
+          <li key={character.name}>
+            <Link
+              to={`/character/${character.name}`}
+              onClick={() => handleCharacterClick(character)}
+            >
+              {character.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
