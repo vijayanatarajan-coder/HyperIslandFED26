@@ -1,6 +1,7 @@
 import "./App.css";
-import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
+//import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
 //import Person from "./Components/Person";
+import GotCharacters from "./Components/Effect/EffectsComponent";
 
 function App() {
   /*const person = {
@@ -16,7 +17,8 @@ function App() {
   return (
     <div>
       {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
-      <MyStateComponent />
+      {/* <MyStateComponent /> */}
+      <GotCharacters />
       {/* <PropsComponent person={person} /> */}
     </div>
   );
