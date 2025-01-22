@@ -54,3 +54,10 @@ Create a Component, that does an API call to get characters from Game of Thrones
 - use the useEffect hook to fetch the data when the component mounts
 - use the useState hook to store the data
 - display the data in a list
+
+### Assignment 11
+
+npm i
+
+- use react router to add routing to the components we've created so far.
+- add navigation for the components
