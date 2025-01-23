@@ -2,7 +2,7 @@ import EventComponent from "./Components/Events/EventComponent";
 import MyFirstComponent from "./Components/Props/MyFirstComponent";
 import MyWrapperComponent from "./Components/Props/MyWrapperComponent";
 import MyStateComponent from "./Components/State/MyStateComponent";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 import FetchComponent from "./Components/useEffect/FetchComponent";
 import EffectsComponent from "./Components/useEffect/EffectsComponent";
 import RefComponent from "./Components/useEffect/RefComponent";
@@ -13,11 +13,26 @@ import Nav from "./Components/Nav/Nav";
 import MySecondComponent from "./Components/Props/MySecondComponent";
 import ErrorPage from "./Components/404/ErrorPage";
 import CharacterComponent from "./Components/useEffect/CharacterComponent";
+import CounterReadOnly from "./Components/context/CounterReadOnly";
+import Child from "./Components/prop/Child";
+import NumberFactNoCallback from "./Components/useCallback/NumberFactNoCallback";
+import NumberFactUseCallback from "./Components/useCallback/NumberFactUseCallback";
+import Parent from "./Components/memo/Parent";
+import NewMemeForm from "./Components/useReducer/NewMemeForm";
+import MemeList from "./Components/useReducer/MemeList";
+import {
+  DispatchContext,
+  MemeContext,
+} from "./Components/useReducer/memeContext";
+import rootReducer from "./Components/useReducer/rootReducer";
 
 function App() {
   const userName = "John";
   const [count, setCount] = useState(10);
   let user;
+
+  const [state, dispatch] = useReducer(rootReducer, { memes: [] });
+
   let allUsers = [
     {
       name: "John",
@@ -113,6 +128,21 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      {/* <NumberFactNoCallback /> */}
+      {/* <NumberFactUseCallback /> */}
+      <Parent />
+      {/* <NumberFactUseCallback /> */}
+
+      {/* <div>
+        <DispatchContext.Provider value={dispatch}>
+          <MemeContext.Provider value={state.memes}>
+            <NewMemeForm />
+            <MemeList />
+          </MemeContext.Provider>
+        </DispatchContext.Provider>
+      </div> */}
+
+      {/* <CounterReadOnly /> */}
     </>
   );
 }
