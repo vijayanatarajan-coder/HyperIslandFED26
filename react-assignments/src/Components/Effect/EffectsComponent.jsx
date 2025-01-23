@@ -4,7 +4,6 @@ const GotCharacters = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       fetch("https://thronesapi.com/api/v2/Characters")
@@ -36,15 +35,17 @@ const GotCharacters = () => {
   }
 
   return (
-    <div>
-      <h1>Game of Thrones Characters</h1>
-      <ul>
-        {data &&
-          data.map((character) => (
-            <li key={character.id}>{character.fullName}</li>
-          ))}
-      </ul>
-    </div>
+    <main>
+      <div>
+        <h1>Game of Thrones Characters</h1>
+        <ul>
+          {data &&
+            data.map((character) => (
+              <li key={character.id}>{character.fullName}</li>
+            ))}
+        </ul>
+      </div>
+    </main>
   );
 };
 

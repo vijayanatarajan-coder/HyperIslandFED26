@@ -29,28 +29,30 @@ const MyStateComponent = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
-      <h1>Form</h1>
-      <label>
-        Name
-        <input
-          type="text"
-          name="name"
-          value={inputValue.name}
-          onChange={handleInputChange}
-        />
-      </label>
-      <label>
-        Age
-        <input
-          type="number"
-          name="age"
-          value={inputValue.age}
-          onChange={handleInputChange}
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <main>
+      <form onSubmit={handleSubmit} className="form-container">
+        <h1>Form</h1>
+        <label>
+          Name
+          <input
+            type="text"
+            name="name"
+            value={inputValue.name}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Age
+          <input
+            type="number"
+            name="age"
+            value={inputValue.age}
+            onChange={handleInputChange}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
   );
 };
 

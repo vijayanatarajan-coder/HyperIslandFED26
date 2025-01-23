@@ -1,10 +1,12 @@
 import "./App.css";
-//import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
-//import Person from "./Components/Person";
+import MyStateComponent from "./Components/PropsComponent";
+import PropsComponent from "./Components/PropsComponent";
 import GotCharacters from "./Components/Effect/EffectsComponent";
+import Nav from "./Components/Nav";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  /*const person = {
+  const person = {
     name: "John",
     info: {
       age: 25,
@@ -12,14 +14,19 @@ function App() {
       job: "Developer",
       hobbies: ["reading", "coding", "gaming"],
     },
-  };*/
+  };
 
   return (
     <div>
-      {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
-      {/* <MyStateComponent /> */}
-      <GotCharacters />
-      {/* <PropsComponent person={person} /> */}
+      <Nav /> {/* Navigation */}
+      <Routes>
+        <Route
+          path="/PropsComponent"
+          element={<PropsComponent name={person.name} info={person.info} />}
+        />
+        <Route path="/EffectsComponent" element={<GotCharacters />} />
+        <Route path="/MyStateComponent" element={<MyStateComponent />} />
+      </Routes>
     </div>
   );
 }
